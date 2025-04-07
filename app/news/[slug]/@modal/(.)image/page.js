@@ -11,9 +11,13 @@ export default async function ImagePage({ params }) {
   const { title, image } = newsItem;
 
   return (
-    <div className="fullscreen-image">
-      <h2>Intercepted</h2>
-      <img src={`/images/news/${image}`} alt={title} />
-    </div>
+    <>
+      <div className="modal-backdrop" />
+      <dialog className="modal" open>
+        <div className="fullscreen-image">
+          <img src={`/images/news/${image}`} alt={title} />
+        </div>
+      </dialog>
+    </>
   );
 }
