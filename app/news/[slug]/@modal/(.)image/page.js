@@ -1,3 +1,4 @@
+import Modal from "@/components/modal";
 import { DUMMY_NEWS } from "@/dummy-news";
 
 export default async function ImagePage({ params }) {
@@ -12,12 +13,7 @@ export default async function ImagePage({ params }) {
 
   return (
     <>
-      <div className="modal-backdrop" />
-      <dialog className="modal" open>
-        <div className="fullscreen-image">
-          <img src={`/images/news/${image}`} alt={title} />
-        </div>
-      </dialog>
+      <Modal title={title} image={image} />
     </>
   );
 }
