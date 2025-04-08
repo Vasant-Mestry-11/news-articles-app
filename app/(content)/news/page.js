@@ -1,9 +1,9 @@
 import NewsLink from "@/components/news-link";
 import { getAllNews } from "@/lib/news";
 
-export default function NewsPage() {
+export default async function NewsPage() {
 
-  const news = getAllNews();
+  const news = await getAllNews();
 
   return (
     <>
