@@ -2,7 +2,7 @@ import NewsLink from "@/components/news-link";
 import { getLatestNews } from "@/lib/news";
 
 export default async function LatestNewsPage() {
-  const news = getLatestNews()
+  const news = await getLatestNews()
 
   return (
     <>
