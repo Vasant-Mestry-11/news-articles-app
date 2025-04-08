@@ -1,12 +1,9 @@
 import NewsLink from "@/components/news-link";
+import { getAllNews } from "@/lib/news";
 
-export default async function NewsPage() {
-  const response = await fetch('http://localhost:8080/news')
+export default function NewsPage() {
 
-  if (!response.ok) {
-    throw new Error('Failed to fetch news')
-  }
-  const news = await response.json(); // JSX wont get executed till we receive data
+  const news = getAllNews();
 
   return (
     <>
